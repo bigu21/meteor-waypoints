@@ -1,0 +1,1 @@
+``` meteor add bigu:waypoints ```
