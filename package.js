@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Wrapper for waypoints.js",
-  version: "0.0.1",
+  version: "0.0.2",
   git: "https://github.com/bigu21/meteor-waypoints.git",
   name: "bigu:waypoints"
 });
