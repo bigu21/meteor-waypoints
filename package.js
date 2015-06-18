@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Wrapper for waypoints.js",
-  version: "0.0.2",
+  version: "0.0.3",
   git: "https://github.com/bigu21/meteor-waypoints.git",
   name: "bigu:waypoints"
 });
@@ -10,5 +10,6 @@ Package.onUse(function(api) {
     api.versionsFrom("METEOR@1.0");
 
   api.addFiles(['waypoints.min.js'], 'client');
-  api.export("Waypoint");
+  api.addFiles(['export.js'], 'client');
+  api.export("Waypoint", 'client');
 });
