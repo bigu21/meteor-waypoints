@@ -10,13 +10,31 @@ meteor add bigu:waypoints
 
 Basic usage:
 
+As with vanilla jQuery scenario the usual approach to handle DOM elements was
+to encapsulate them on ```$(document).ready()``` to ensure they are rendered,
+the same still applies to this in a Meteorish style, encapsulate the targetered
+element inside ```onRendered()```, as follows in the example:
+
+```html
+  <body>
+    {{> hello }}
+  </body>
+
+  <template name="hello">
+    <div style='height: 130vh'></div>
+    <div id="thing"></div> <!-- Waypoint handler is activated when scroll reaches this -->
+  </template>
+```
+
 ```js
-var waypoint = new Waypoint({
-  element: document.getElementById('thing'),
-  handler: function(direction) {
-    alert('You have scrolled to a thing');
-  }
-})
+Template.hello.onRendered() {
+  var waypoint = new Waypoint({
+    element: document.getElementById('thing'),
+    handler: function(direction) {
+      alert('You have scrolled to a thing');
+    }
+  })
+}
 ```
 
 Note that the Waypoint version included on this packages does require a raw DOM element, not a jQuery object. If you want to use jQuery selectors, make sure you will pass raw DOM element to Waypoint by doing so:
