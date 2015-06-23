@@ -40,7 +40,7 @@ Element selector(```document.getElementById('thing')``` in this case) **MUST**
 return a raw DOM node at the moment of Waypoint's instantiation. A handler is
 also **always** required.
 
-Note that the Waypoint version included on this packages does require a raw DOM element, not a jQuery object. If you want to use jQuery selectors, make sure you will pass raw DOM element to Waypoint by doing so:
+Note that the Waypoint version included on this package does require a raw DOM element, not a jQuery object. If you want to use jQuery selectors, make sure you will pass raw DOM element to Waypoint by doing so:
 
 ```
 $('#foo')[0]
