@@ -12,7 +12,7 @@ Basic usage:
 
 As with vanilla jQuery the usual approach to handle DOM elements is 
 to encapsulate them on ```$(document).ready()``` to ensure they are rendered,
-the same still applies to this in a __Meteorish__ style, encapsulate the targeted
+the same still applies to this in a *Meteorish* style, encapsulate the targeted
 element inside ```onRendered()```, as follows in the example:
 
 ```html
